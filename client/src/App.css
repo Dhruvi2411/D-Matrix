@@ -1,0 +1,142 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.backgroundSet {
+  color-scheme: dark;
+  background: var(--color-sky-from);
+  color: var(--color-text);
+
+  transition: background 350ms cubic-bezier(0.41, 0.1, 0.13, 1), 
+              color 350ms cubic-bezier(0.41, 0.1, 0.13, 1);
+
+  --color-text: hsl(210deg 10% 90%);
+  --color-background: hsl(210deg 15% 6%);
+  --color-blurred-background: hsl(210deg 15% 6% / 0.75);
+  --color-muted-background: hsl(210deg 38% 15% / 0.85);
+  --color-action: hsl(240deg 95% 62%);
+  --color-primary: hsl(225deg 100% 75%);
+  --color-secondary: hsl(333deg 100% 55%);
+  --color-tertiary: hsl(280deg 100% 85%);
+  --color-decorative: hsl(200deg 50% 60%);
+  --color-info-100: hsl(214deg 40% 15%);
+  --color-info-200: hsl(218deg 32% 20%);
+  --color-info-300: hsl(218deg 30% 25%);
+  --color-info-400: hsl(218deg 45% 40%);
+  --color-info-500: hsl(225deg 100% 60%);
+  --color-info-700: hsl(215deg 100% 72%);
+  --color-warning-100: hsl(30deg 25% 11%);
+  --color-warning-200: hsl(32deg 20% 15%);
+  --color-warning-300: hsl(32deg 25% 20%);
+  --color-warning-400: hsl(35deg 45% 35%);
+  --color-warning-500: hsl(40deg 100% 50%);
+  --color-warning-700: hsl(43deg 100% 72%);
+  --color-success-100: hsl(176deg 35% 10%);
+  --color-success-200: hsl(176deg 26% 14%);
+  --color-success-300: hsl(176deg 28% 20%);
+  --color-success-400: hsl(176deg 45% 30%);
+  --color-success-500: hsl(160deg 100% 40%);
+  --color-success-700: hsl(160deg 80% 65%);
+  --color-cloud-100: hsl(210deg 15% 6%);
+  --color-cloud-300: hsl(212deg 40% 9%);
+  --color-cloud-400: hsl(213deg 40% 10%);
+  --color-cloud-500: hsl(213deg 40% 12%);
+  --color-sky-from: hsl(214deg 40% 11%);
+  --color-sky-to: hsl(200deg 50% 30%);
+  --color-sky-subtle: hsl(210deg 40% 16%);
+  --color-gray-50: hsl(210deg 19% 9%);
+  --color-gray-100: hsl(210deg 15% 12%);
+  --color-gray-200: hsl(210deg 15% 18%);
+  --color-gray-300: hsl(210deg 10% 30%);
+  --color-gray-400: hsl(210deg 9% 40%);
+  --color-gray-500: hsl(210deg 8% 50%);
+  --color-gray-600: hsl(210deg 12% 55%);
+  --color-gray-700: hsl(210deg 14% 66%);
+  --color-gray-800: hsl(210deg 20% 77%);
+  --color-gray-900: hsl(210deg 25% 88%);
+  --color-gray-1000: hsl(210deg 25% 96%);
+  --color-adaptive-white: hsl(210deg 25% 92%);
+  --syntax-bg: hsl(210deg 15% 6%);
+  --syntax-highlight: hsl(210deg 30% 18%);
+  --syntax-txt: hsl(0deg 0% 100%);
+  --syntax-comment: hsl(200deg 18% 51%);
+  --syntax-prop: hsl(326deg 100% 61%);
+  --syntax-bool: hsl(50deg 100% 50%);
+  --syntax-val: hsl(210deg 12% 65%);
+  --syntax-str: hsl(259deg 100% 71%);
+  --syntax-name: hsl(280deg 100% 66%);
+  --syntax-del: hsl(0deg 100% 67%);
+  --syntax-regex: hsl(50deg 100% 50%);
+  --syntax-fn: hsl(195deg 100% 50%);
+  --color-info: hsl(225deg 100% 80%);
+  --color-info-background: hsl(225deg 100% 80% / 0.1);
+  --color-error: hsl(340deg 95% 60%);
+  --color-error-background: hsl(340deg 95% 43% / 0.1);
+  --color-success: hsl(160deg 100% 40%);
+  --color-success-background: hsl(160deg 100% 40% / 0.1);
+  --color-alert: hsl(40deg 100% 50%);
+  --color-alert-background: hsl(40deg 100% 50% / 0.1);
+  --color-page-background: hsl(210deg 15% 6%);
+  --color-page-primary: hsl(225deg 100% 75%);
+  --kbd-background-color: hsl(210deg 9% 40%);
+  --kbd-border-color: hsl(210deg 10% 30%);
+  --color-code-bg: hsl(210deg 15% 12%);
+  --color-content-outline: hsl(210deg 10% 30%);
+  --color-swap-duration: 350ms;
+  --color-swap-timing-function: cubic-bezier(0.41, 0.1, 0.13, 1);
+}
+
+.clouds-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So it doesn't block interactions with other elements */
+  overflow: hidden;
+  z-index: -1; /* Put the clouds in the background */
+}
+
+.clouds {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 200%;
+  height: 200px; /* Adjust the height as needed */
+  background: url('https://www.example.com/cloud-image.png'); /* Replace with your cloud image URL */
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.6; /* Slight transparency */
+  filter: blur(8px); /* Optional: Blur for softer clouds */
+}
+
+.layer1 {
+  animation: cloudMovement 60s linear infinite;
+  opacity: 0.4;
+  top: 10%;
+}
+
+.layer2 {
+  animation: cloudMovement 90s linear infinite;
+  opacity: 0.5;
+  top: 20%;
+}
+
+.layer3 {
+  animation: cloudMovement 120s linear infinite;
+  opacity: 0.6;
+  top: 30%;
+}
+
+/* Cloud movement animation */
+@keyframes cloudMovement {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
