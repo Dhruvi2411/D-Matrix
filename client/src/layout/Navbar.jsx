@@ -45,7 +45,7 @@ function Navbar() {
     `transition cursor-pointer ${
       activeSection === id
         ? "text-[#003566] font-semibold border-b-2 border-[#003566]"
-        : "hover:text-gray-500 text-white"
+        : "hover:text-gray-400 text-white"
     }`;
 
   return (

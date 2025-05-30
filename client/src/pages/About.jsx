@@ -13,7 +13,7 @@ function About() {
           </span>
         </h2>
 
-        <p className="text-gray-400 leading-relaxed mb-2">
+        <p className="text-gray-400 leading-relaxed mb-2 text-justify">
           Hi! 👋 I'm{" "}
           <span className="font-semibold text-white">Dhruvi Mangaroliya</span>,
           a dedicated full-stack developer and a final-year student at{" "}
@@ -24,7 +24,7 @@ function About() {
           web applications.
         </p>
 
-        <p className="text-gray-400 leading-relaxed mb-2">
+        <p className="text-gray-400 leading-relaxed mb-2 text-justify">
           I specialize in the{" "}
           <span className="text-gray-50 font-medium">MERN stack</span> (MongoDB,
           Express.js, React.js, Node.js), and love clean, modular backend
@@ -37,14 +37,14 @@ function About() {
           roles in educational institutions.
         </p>
 
-        <p className="text-gray-400 leading-relaxed mb-2">
+        {/* <p className="text-gray-400 leading-relaxed mb-2 text-justify">
           I’m also diving into{" "}
           <span className="text-gray-50 font-medium">Spring Boot</span> to
           broaden my backend expertise. My ultimate goal? To become a developer
           who builds secure, reliable, and impactful solutions! 💻✨
-        </p>
+        </p> */}
 
-        <p className="text-gray-400 leading-relaxed">
+        <p className="text-gray-400 leading-relaxed text-justify">
           When I'm not coding, I'm probably vibing with some late-night
           debugging or designing interfaces that just feel ✨ right. I love
           learning new tools and tech and always aim to make things a little

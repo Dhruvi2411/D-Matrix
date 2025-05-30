@@ -12,36 +12,38 @@ function Footer() {
   return (
     <footer id="footer" className="py-6 mt-10">
       <hr className="text-gray-800" />
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <div className="flex space-x-6">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center pt-8">
+        <h2 className="text-lg font-semibold text-gray-400">
+          D-Matrix © {new Date().getFullYear()}. All rights reserved.
+        </h2>
+        <div className="flex space-x-6 text-gray-400">
           <button
             onClick={() => scrollToSection("home")}
-            className="font-bold hover:text-gray-400 transition duration-300 cursor-pointer"
+            className="font-semibold hover:text-gray-300 transition duration-300 cursor-pointer"
           >
             Home
           </button>
 
           <button
             onClick={() => scrollToSection("about")}
-            className="font-bold hover:text-gray-400 transition duration-300 cursor-pointer"
+            className="font-semibold hover:text-gray-300 transition duration-300 cursor-pointer"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("project")}
-            className="font-bold hover:text-gray-400 transition duration-300 cursor-pointer"
+            className="font-semibold hover:text-gray-300 transition duration-300 cursor-pointer"
           >
             Project
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="font-bold hover:text-gray-400 transition duration-300 cursor-pointer"
+            className="font-semibold hover:text-gray-300 transition duration-300 cursor-pointer"
           >
             Contact
           </button>
         </div>
         <div className="mb-4 md:mb-0 text-center md:text-left">
-
           <div className="mt-2 flex justify-center md:justify-start space-x-4">
             {/* GitHub */}
             <a
@@ -66,10 +68,6 @@ function Footer() {
               <FaInstagram className="hover:text-gray-400 transition text-2xl" />
             </a>
           </div>
-
-          <h2 className="text-lg font-semibold text-gray-400">
-            D-Matrix © {new Date().getFullYear()}
-          </h2>
         </div>
       </div>
     </footer>
